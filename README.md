@@ -1,4 +1,4 @@
 # Practice
 Testing out stuff
 
-credit to Traversity media : https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA 
+credit to Traversy Media : https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA 
