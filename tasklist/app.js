@@ -5,8 +5,6 @@ const clearBtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
 
-//Time to test
-
 // Load all event listeners
 loadEventListeners();
 
@@ -46,10 +44,27 @@ function addTask(e) {
   // Append li to ul
   taskList.appendChild(li);
 
+  //Store in LS
+  storeTaskInLocalStorage(taskInput.value);
+
   // Clear input
   taskInput.value = '';
 
   e.preventDefault();
+}
+
+//Store task in LS
+storeTaskInLocalStorage(task){
+  let tasks;
+  if(localStorage.getItem(task) ==+ null){
+    tasks = [];
+  }else{
+    task = JSON.parse(localStorage.getItem('tasks'))
+  }
+
+  tasks.push(task);
+
+  localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 // Remove Task
